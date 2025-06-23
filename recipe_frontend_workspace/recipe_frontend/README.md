@@ -2,16 +2,22 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, build your application (required before starting in production mode):
+
+```bash
+npm run build
+```
+
+Then, to run the production server:
+
+```bash
+npm run start
+```
+
+During development, you may use the development server directly:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -34,3 +40,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## Troubleshooting ENOENT: middleware-manifest.json
+
+If you encounter the error:
+```
+ENOENT: no such file or directory, open '.next/server/middleware-manifest.json'
+```
+Run `npm run build` before `npm start`.  
+This file is generated at build time and is required for Next.js production starts.

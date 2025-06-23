@@ -1,3 +1,4 @@
 export default function RecipesIndexPage() {
-  return null;
+  // This page intentionally left blank; add content here as needed.
+  return <></>;
 }
